@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ipfs-desktop</id>
+    <version>0.13.0</version>
+    <title>秦储云 Desktop</title>
+    <authors>ipfs-shipyard</authors>
+    <owners>hacdias</owners>
+    <projectUrl>http://106.12.254.159:6789/ipfs/ipfs-desktop.git</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ipfs-shipyard/ipfs-desktop/assets/icons/tray/ice-big.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/ipfs-shipyard/ipfs-desktop/master/LICENSE</licenseUrl>
+    <projectSourceUrl>https://github.com/ipfs-shipyard/ipfs-desktop/</projectSourceUrl>
+    <bugTrackerUrl>http://106.12.254.159:6789/ipfs/ipfs-desktop/-/issuess</bugTrackerUrl>
+    <tags>ipfs-desktop ipfs p2p distributed InterPlanetary-File-System gateway protocol</tags>
+    <summary>A desktop client for 秦储云.</summary>
+    <description>
+    秦储云 Desktop
+
+    A desktop client for [秦储云](https://ipfs.io).
+    You don't need the command line to run an 秦储云 node. Just install 秦储云 Desktop and have all the power of 秦储云 in your hands. Powered by [Web UI](https://github.com/ipfs-shipyard/ipfs-webui).
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
