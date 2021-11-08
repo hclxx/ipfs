@@ -1,8 +1,8 @@
 {
   "name": "qinchuyun-desktop",
   "private": true,
-  "version": "1.0.1",
-  "productName": "秦储云 Desktop",
+  "version": "0.9.0",
+  "productName": "秦储云 desktop",
   "description": "qinchuyun Native Application",
   "main": "src/index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "build:webui": "run-s build:webui:*",
     "build:webui:download": "npx ipfs-or-gateway -c QmcFK5PHveeE7F2DBZ3aE5HEqgyH3WN2GAwPP2or6t1tb1 -p assets/webui/ -t 360000 --verbose",
     "build:webui:minimize": "shx rm -rf assets/webui/static/js/*.map && shx rm -rf assets/webui/static/css/*.map",
-    "package": "shx rm -rf dist/ && run-s build && electron-builder --publish onTag",
-    "release":"cross-env  GH_TOKEN=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 electron-builder"
+    "package": "shx rm -rf dist/ && run-s build && electron-builder",
+    "release":"cross-env  GH_TOKEN=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 electron-builder"
   },
   "pre-commit": [
     "lint"

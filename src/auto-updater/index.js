@@ -68,7 +68,7 @@ function setup (ctx) {
     })
 
     if (opt === 1) {
-      shell.openExternal(`https://github.com/ipfs-shipyard/ipfs-desktop/releases/v${version}`)
+      shell.openExternal(`http://127.0.0.1/download/`)
     }
   })
 
@@ -136,19 +136,19 @@ async function checkForUpdates () {
 }
 
 module.exports = async function (ctx) {
-  if (process.env.NODE_ENV === 'development') {
-    ctx.manualCheckForUpdates = () => {
-      showDialog({
-        title: 'Not available in development',
-        message: 'Yes, you called this function successfully.',
-        buttons: [i18n.t('close')]
-      })
-    }
-    return
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   ctx.manualCheckForUpdates = () => {
+  //     showDialog({
+  //       title: 'Not available in development',
+  //       message: 'Yes, you called this function successfully.',
+  //       buttons: [i18n.t('close')]
+  //     })
+  //   }
+  //   return
+  // }
   if (!isAutoUpdateSupported()) {
     ctx.manualCheckForUpdates = () => {
-      shell.openExternal('https://github.com/ipfs-shipyard/ipfs-desktop/releases/latest')
+      shell.openExternal('http://127.0.0.1/download/')
     }
     return
   }
