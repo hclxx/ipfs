@@ -72,11 +72,11 @@ snap:
     - removable-media
   publish:
     provider: generic
-    url: http://127.0.0.1/download/
+    url: http://land.hclxx.cn/download/
 
 publish:
   provider: generic
-  url: http://127.0.0.1/download/
+  url: http://land.hclxx.cn/download/
 
 protocols:
   - name: IPFS

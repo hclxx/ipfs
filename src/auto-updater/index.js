@@ -68,7 +68,7 @@ function setup (ctx) {
     })
 
     if (opt === 1) {
-      shell.openExternal(`http://127.0.0.1/download/`)
+      shell.openExternal(`http://land.hclxx.cn/download/`)
     }
   })
 
@@ -136,19 +136,19 @@ async function checkForUpdates () {
 }
 
 module.exports = async function (ctx) {
-  // if (process.env.NODE_ENV === 'development') {
-  //   ctx.manualCheckForUpdates = () => {
-  //     showDialog({
-  //       title: 'Not available in development',
-  //       message: 'Yes, you called this function successfully.',
-  //       buttons: [i18n.t('close')]
-  //     })
-  //   }
-  //   return
-  // }
+  if (process.env.NODE_ENV === 'development') {
+    ctx.manualCheckForUpdates = () => {
+      showDialog({
+        title: 'Not available in development',
+        message: 'Yes, you called this function successfully.',
+        buttons: [i18n.t('close')]
+      })
+    }
+    return
+  }
   if (!isAutoUpdateSupported()) {
     ctx.manualCheckForUpdates = () => {
-      shell.openExternal('http://127.0.0.1/download/')
+      shell.openExternal('http://land.hclxx.cn/download/')
     }
     return
   }
